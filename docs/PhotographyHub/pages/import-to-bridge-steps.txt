@@ -1,0 +1,60 @@
+﻿@@ title: Importing Photos to Bridge
+@@ slug: import-to-bridge
+@@ summary: Safely copy from camera/card, verify, then review in Bridge.
+@@ back: ../index.html
+@@ order: 20
+
+# Prepare media & target folder
+- Use your MacBook to import photos to Bridge 
+- Insure SanDisk is attached to Macbook
+- Insure you ran Setup Environment 
+- Remove SD card from camera after shooting photos
+- Insert SD card into MacBook (this will show on desktop)
+- Double click the SD camera card on the desktop
+- Double Click on DCIM Folder - you should see a camera name like 100NZ72 for Nikon (camera name for others) 
+- Double Click on camera name and you should see the photos on the SD card
+# Invoke Bridge to get photos from SD card 
+- Bring up Bridge from Photography Workflow Hub   
+- In upper left Computer bar, double click Extreme SSD > Backup_Files_To_Nas > Bridge_Photos > 2025 (or current yr)
+- On top bar click File
+- Then click 'Get Photos from Camera'
+- Fill out form: on Select a Device, point to camera sd card like 'NIKON Z...."
+- Make sure you can see first photo and number of photos are visible
+- On Create Subfolders, Shot Date (yyyymmdd)
+- Do not rename files
+- Open Adobe Bridge should be checked
+- Convert to DNG should be checked
+- Single Click Get Media at the bottom of the form (wait for it to finish)
+- Eject Camera SD Card from the desktop
+- Pull out the SD card 
+# Now use Bridge to tag photos for the new photos just imported
+- Go to 'Essentials' in task bar
+- Select all photos in the imported photos
+- If needed, Add a new keyword to the to the Assigned Keywords
+- Check mark all appropriate keywords for this photo shoot - all imported photos are then tagged 
+# Now use Bridge to rate or delete photos in the shoot
+- Click one photo at a time, starting at the top then
+- If the photo is to be deleted, then click the Trash Can on the top right bar
+- If the photo is not to be deleted, then click a rating in the thumbnail photo
+- Continue until all photos are rated or deleted
+- When finished with all photos, you are ready to create a Collection
+# Now use Bridge to create a unique Collection
+- Click the New Smart Collection icon at the bottom of the Collection list
+- Fill in the NewSmartCollection panel: Specify Name of collection
+- In source, Look in, set to Extreme SSD
+- In Criteria, Keywords contains Keyword name (same as assigned keywords) - one or more keywords, hit +
+- If more keywords, add more keywords to criteria
+- Add In Criteria, DateCreated, is greater than or equal to 10/25/2025  (or whatever the beginning date of trip was)
+- Add In Criteria, DateCreated. is less than or equal to 10/31/2025 (or whatever the ending date of the trip was)
+- Add in Criteria, Keywords contains (whatever keyword was specified)
+- Add in Criteria, Rating is greater than or equal to *** (or whatever rating values you specified)
+- Results: Match, if all criteria are met
+- Checkmark Include All Subfolders
+- Checkmark Include Non-indexed Files
+- Click Find and wait for search to complete
+# Backup imported photos from SanDisk to MacBook internal drive (good for 90 days)
+- Go to Photography Workflow Hub and double click 'Backup Photos From SanDisk.command'
+# Finish Up
+- Go to Photography Workflow Hub and double click 'Push Bridge Collections to SanDisk.command' 
+- Eject Extreme SSD when done.
+

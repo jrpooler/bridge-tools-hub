@@ -1,0 +1,522 @@
+
+@@ title: Importing Photos to Bridge
+@@ slug: import-to-bridge
+@@ summary: Safely copy from camera/card, verify, then review in Bridge.
+@@ back: ../index.html
+@@ order: 20
+
+# Updated on 02/15/2026 @ 9:20 AM
+
+# Prepare media & target folder
+- Use your MacBook to import photos to Bridge 
+- Insure SanDisk is attached to MacBook
+- Remove SD card from camera after shooting photos
+- Do not insert SD card to Mac yet
+
+# Invoke Bridge to get photos from SD card
+- If the 'Photography Workflow Hub' is not open then double click on 'Bridge Tools' on desktop
+- Double click on  'Open Bridge (Shot Dates: Pick Year)' in the HUB tools
+- Click your year choice, then click 'OK' button
+- Click 'File' at top row of your screen
+- Click 'Get Photos From Camera' - this will bring up Adobe Bridge - Photo Downloader
+- Set location with this path:  
+-    Macintosh HD / Users / your username / pictures / TripPhotoPhotoToBackup / select year
+-    Click open
+- Insure 'Create Subfolders' is set to 'Shot Date (yyyymmdd)'
+- Insure 'Rename Files:' is set to 'Do not rename files'
+- Insure only 'Convert to DNG" is checked
+- Insure Template to Use is set to 'Basic Metadata'
+- Insert SD card into the MacBook and wait for Photo Downloader panel
+- Click 'Get Photos from:' and click <refresh list>
+- Click Select a Device again and click 'Select a Device'
+- Click where the photos are (like Nikon Z72 or your camera name)
+- Photos should be visible and checked
+- Single Click 'Get Media' at the bottom right of the form (wait for it to finish)
+- Eject Camera SD Card from the desktop
+- Pull out the SD card from MacBook
+
+# Now use Bridge to tag photos for the new photos just imported
+- Open the Shotdate folder: double click that folder
+- Select all photos in the shotdate folder
+- Go to 'Keywords' in task bar (second row from the top)
+- Add a new keyword or use an existing one (to add right click in Keywords panel)
+- Repeat this process for each Shotdate folder that was in the camera's sd card
+
+# Now send the tagged photos to the SandDisk
+- Open Bridge Tools Dashboard
+- Double click 'Run' in 'Send Photos to SanDisk'  (now your imports are in 2 places)
+- Check and then Close result panel 
+- It is now safe to format the camera's sd card using your camera
+- Now your imports are in 3 places: Your MacBook, Your SanDisk, and your camera's backup SD card
+
+# Switch to SanDisk
+- Open Bridge Tools Dashboard
+- Double click 'Run' in Open Bridge (Master)
+- Go to 'Essentials' (if not already there) 
+
+# Now use Bridge to create a unique Collection
+- Click the New Smart Collection icon at the bottom of the Collection list
+- Fill in the NewSmartCollection panel: Specify Name of collection
+- In source, set 'Look in' to 'Bridge_Photos'
+- In Criteria, Keywords contains Keyword name (same as assigned keywords) - one or more keywords, hit +
+- If more keywords, add more keywords to criteria
+- Add in Criteria, for additional keywords, if any
+- Add in Criteria, Rating is greater than or equal to *** (or whatever rating values you specified)
+- Results: Match, if all criteria are met
+- Checkmark Include All Subfolders
+- Checkmark Include Non-indexed Files
+- Click 'Find' and wait for search to complete
+
+# Now use your new Bridge collection to rate or delete photos
+- Use Bridge Tools Dashboard to Open Bridge (Master)
+- Single click your new Collection (in Essentials - Collections panel)
+- Single click the first photo in the collection
+- If you want to delete this photo, then click Trash Can (in second from top row, right side)
+- Otherwise, click a rating (1 to 5) 
+- Repeat for each photo in the collection
+
+# Now modify Collection criteria to provide which photos are to be enhanced or edited
+- Select the Bridge collection - single click
+- Click 'Edit Smart Collection'
+- Double Click on '+' in criteria - this will offer a new critera row
+- On that row, click 'Rating' , then select 'is greater than or equal to', then select minimum stars (like ***)
+- Click 'Find' button
+- You can change the number of stars to include or exclude which photos are in the Collection
+
+# Edit your Photos in your Collection using ACR and / or Photoshop
+
+
+@@ title: GPS Tracking
+@@ slug: gps-tracking
+@@ summary: Record on GPSMAP 67, export GPX, AirDrop to Mac - requires relevant collection
+@@ back: ../index.html
+@@ order: 30
+
+# Prepare GPSMAP 67 -
+- Go outside where GPS can lock satellites.
+- Wait until GPS gets satellites
+- Confirm recording interval (e.g., 1s) and accuracy mode.
+- Make sure time zone and date are accurate on camera
+- Make sure Daylight Saving Time On or Off is correct
+- Run iPhone app for camera that syncs camera date/time to internet time
+- Verify time and time zone in camera matches GPS - compare clocks
+
+# Record the activity
+- Start activity on GPSMAP 67.
+- Walk/drive your route; check track is recording.
+- When done taking pictures, end and save the activity; give it a clear name (like: Lake-Tahoe-2025-11-3)
+
+# Initial setup sync with iPhone (Explore App) - this should be done only once
+- On GPSMAP, Setup >  Bluetooth > Phone > Connect
+- On iPhone, Open Garmin Explore app (paired)
+- Activity syncs automatically to Explore > Library > Activities 
+
+# Share as GPX to MacBook AirDrop
+- Use iPhone, Explore App should be paired with Garmin Explore
+- Click red button (Share as GPX)
+- Export as AirDrop to MacBook - click the AirDrop icon
+- Find it in Downloads in Mac - use Finder
+
+# Move gps file from Downloads to Extreme SSD
+- Open Extreme SSD / Backup_Files_To_NAS / GPX TrackLogs 
+- Move GPX file from Downloads to GPX TrackLogs using 2 finder windows
+
+# Use GPX file to put geodetic data into appropriate Bridge Collection
+- Open Bridge
+- Select Bridge Collection pertaining to GPX Tracklog
+- Select All photos in the collection
+- Click Tools > Geotagging
+- Click Select File
+- Navigate to Extreme SSD > Backup_Files_To_NAS > GPS TrackLogs > Your Tracklog Name
+- Click the Start button in GeoTagging panel
+- When finished, click Done on Geotagging panel
+- Check the Metadata of photos for GPS values
+
+
+@@ title: Using Legacy Photos (2001–2024) in Collections
+@@ slug: legacy-collections
+@@ summary: Safely use older SanDisk photos in Bridge Collections without moving or breaking anything.
+@@ back: ../index.html
+@@ order: 40
+
+# What “Legacy Years” means
+- Legacy Years are older photos already stored on the SanDisk (for example 2001–2024).
+- These photos live under your main photo root on the SanDisk, usually:
+- /Volumes/Extreme SSD/Backup_Files_To_NAS/Bridge_Photos
+- You do **not** need to move these into TripPhotoBackup to use them in Collections.
+- Collections are like **playlists**: they point to where files live; they do not copy or move the files.
+
+# Before you start
+- Make sure the SanDisk (Extreme SSD) is attached to your MacBook.
+- Confirm that Bridge Tools is working:
+- On the Desktop, double-click **Bridge Tools** to open the Photography Workflow Hub.
+- In the hub, make sure the **Tools** row shows buttons such as:
+- Open Bridge (Master)
+- Build & Open Workflow Hub
+- Send Photos to SanDisk
+- Open Bridge (Shot Dates: Pick Year)
+- Edit MASTER-steps.txt
+
+# Step 1 – Open Bridge at the Legacy photo root
+- Attach **Extreme SSD**.
+- On the Desktop, double-click **Bridge Tools**.
+- In the Photography Workflow Hub, in the Tools row, click:
+- **Open Bridge (Master)**
+- Bridge 2026 should open pointed at:
+- Computer → Extreme SSD → Backup_Files_To_NAS → Bridge_Photos
+- If Bridge opens somewhere else:
+- In Bridge, click the **Folders** panel.
+- Navigate manually to:
+- Computer → Extreme SSD → Backup_Files_To_NAS → Bridge_Photos
+
+# Step 2 – Navigate to the year and folder you want
+- In the **Folders** panel, expand your Legacy Years inside **Bridge_Photos**.
+- Examples:
+- Bridge_Photos → 2007 → Mammoth Lakes Trip
+- Bridge_Photos → 2013 → Palm Desert
+- Bridge_Photos → 2020 → Park City
+- Wait for thumbnails to build, especially if this is a large folder.
+- Use the **Content** panel to view all photos in the selected folder.
+
+# Step 3 – Select the photos for a Collection
+- In the **Content** panel:
+- Click a thumbnail to select a single photo.
+- Shift-click to select a range of photos.
+- Command-click to add or remove individual photos from the selection.
+- Take a moment to confirm the selection:
+- Are all the right photos highlighted?
+- Are any photos selected that you do **not** want in the Collection?
+
+# Step 4 – Create a new Collection from Legacy photos
+- Open the **Collections** panel in Bridge:
+- If needed, click **Window → Collections**.
+- To make a brand-new Collection from your Legacy photos:
+- In the Collections panel, click the **+** icon (or use the panel menu → **New Collection**).
+- In the dialog that appears:
+- Give the Collection a clear name, such as:
+- Mammoth Lakes 2007 (Legacy)
+- Palm Desert 2013 (Legacy)
+- Make sure **Include selected items** is checked.
+- Click **OK**.
+- Bridge will create the Collection that points to the photos in their existing Legacy folder on the SanDisk.
+
+# Step 5 – Add Legacy photos to an existing Collection
+- If you already have a Collection and want to add more Legacy photos:
+- Go back to the **Folders** panel and select the legacy folder (for example 2010 → Desert Springs).
+- In the **Content** panel, select the additional photos you want.
+- In the **Collections** panel:
+- Drag the selected photos onto the target Collection name.
+- The Collection will now include both the new Legacy photos and anything that was already there.
+- Reminder:
+- The files are **not** duplicated.
+- The Collection simply points to their existing location under Bridge_Photos.
+
+# Step 6 – Verify Collections still work as expected
+- In the **Collections** panel, click on your Collection:
+- Confirm that thumbnails appear for all expected photos.
+- Double-click a photo:
+- Confirm it opens in Bridge / ACR / Photoshop as you normally expect.
+- If any thumbnails show as missing:
+- Check that the photo still lives under:
+- /Volumes/Extreme SSD/Backup_Files_To_NAS/Bridge_Photos
+- If files were moved outside Bridge, you may need to repair or re-create the Collection.
+
+# Important: Avoid moving Legacy folders unless you plan to rebuild Collections
+- Existing Collections remember the **old path** to each file.
+- If you move legacy folders (for example from:
+- Bridge_Photos/OldArchive/Family
+- to
+- Bridge_Photos/2005/Family_Trip),
+- Bridge will consider those links “broken” and the Collection may show missing files.
+- Unless the current folder layout is truly unmanageable:
+- Prefer to **leave Legacy Years where they already are** on the SanDisk.
+- Use Collections to group and find photos instead of physically moving old folders.
+
+# Optional: If you really must reorganize a Legacy folder
+- Before making any big changes, consider:
+- Take notes on which Collections use that legacy folder.
+- Optionally export a small test folder and experiment with a copy first.
+- Basic approach if you decide to reorganize:
+- In Finder, **do not** move the real folders yet.
+- Instead, test with a smaller subset of photos:
+- Copy a few files into a new structure under Bridge_Photos.
+- In Bridge, build a new Collection that points to the **new** location.
+- Confirm this new structure works for you.
+- Only when you are comfortable:
+- Plan a larger reorganization and expect to:
+- Rebuild or repair existing Collections that referenced the old locations.
+- For most cases, it is much safer to:
+- Keep Legacy Years where they are.
+- Use Collections as your main way to assemble favorite sets of photos.
+
+
+@@ title: Install Bridge Tools on another Mac with SanDisk
+@@ slug: install-bridge-tools-second-mac
+@@ summary: Set up Bridge Tools, the Workflow Hub, and your SanDisk on a second Mac so everything works like your main system.
+@@ back: ../index.html
+@@ order: 90
+
+# Overview
+- Goal: make a second Mac behave like your main Mac for Bridge work:
+- Same SanDisk structure (Bridge_Photos, PhotographyHub, Bridge_Photo_Shortcuts)
+- Same Photography Workflow Hub (cards + Tools row)
+- Same Bridge Tools (Open Bridge (Master), Send Photos to SanDisk, etc.)
+- You can:
+- Use the *same* SanDisk with both Macs (simplest), or
+- Create a *clone* SanDisk that has the same folder layout and hub.
+
+# Part A – Make sure the SanDisk is ready
+- On your main Mac (where everything already works):
+- Attach **Extreme SSD**.
+- In Finder, confirm this structure exists:
+- /Volumes/Extreme SSD/Backup_Files_To_NAS/Bridge_Photos
+- /Volumes/Extreme SSD/Backup_Files_To_NAS/PhotographyHub
+- /Volumes/Extreme SSD/Backup_Files_To_NAS/Bridge_Photo_Shortcuts
+- Bridge_Photo_Shortcuts should contain:
+- Bridge_Tools_Launcher.command
+- Open_Bridge_Using_Master.command
+- Open_Bridge_Shot_Dates_Pick_Year.command
+- Build_And_Open_Hub.command
+- Send_Photos_To_SanDisk.command
+- Edit_MASTER_steps.command (or similar)
+- bridge_env.sh
+
+## Option 1 – Share one SanDisk between both Macs (recommended)
+- Easiest and safest:
+- Keep using the same **Extreme SSD** on both Macs.
+- PhotographyHub, Bridge_Photos, and Bridge_Photo_Shortcuts live only on this drive.
+- Each Mac:
+- Has its own local TripPhotoBackup folder.
+- Uses the same SanDisk for “master” originals and the hub.
+- Skip to **Part B**.
+
+## Option 2 – Clone to a second SanDisk (optional)
+- If you want a separate, identical SanDisk:
+- On your main Mac:
+- Attach **BOTH** drives:
+- Source: current **Extreme SSD** (already in use)
+- Target: new SanDisk (empty or OK to erase)
+- Use a cloning method you trust:
+- Disk Utility “Restore” (drive-to-drive clone), or
+- A backup/clone tool you already use (for example, Carbon Copy Cloner or similar).
+- Important:
+- Give the new drive the same name:
+- **Extreme SSD**
+- So all paths like:
+- /Volumes/Extreme SSD/Backup_Files_To_NAS/...
+- are valid on either drive.
+- After cloning, eject the original and test the new SanDisk by itself:
+- Attach only the new SanDisk.
+- In Finder, confirm:
+- Bridge_Photos
+- PhotographyHub
+- Bridge_Photo_Shortcuts
+- all exist under Backup_Files_To_NAS.
+
+# Part B – First-time setup on the second Mac
+- On the new Mac:
+
+## Step 1 – Install the apps you need
+- Install **Adobe Bridge 2026** (same major version as the main Mac).
+- Install **Visual Studio Code** (for editing MASTER-steps.txt and scripts).
+- Shortcuts app is built into macOS; no extra install needed.
+
+## Step 2 – Attach SanDisk and test basic access
+- Attach **Extreme SSD** to the second Mac.
+- In Finder:
+- Click **Extreme SSD** in the sidebar.
+- Drill down to:
+- Backup_Files_To_NAS → Bridge_Photos
+- Backup_Files_To_NAS → PhotographyHub → index.html
+- Backup_Files_To_NAS → Bridge_Photo_Shortcuts
+- Double-click **Bridge_Tools_Launcher.command**:
+- Confirm the **Photography Workflow Hub** opens in Safari.
+- Check the **Tools** row at the top:
+- Open Bridge (Master)
+- Build & Open Workflow Hub
+- Send Photos to SanDisk
+- Open Bridge (Shot Dates: Pick Year)
+- Edit MASTER-steps.txt
+
+## Step 3 – Create the “Bridge Tools” icon on the Desktop
+- In Finder, navigate to:
+- /Volumes/Extreme SSD/Backup_Files_To_NAS/Bridge_Photo_Shortcuts
+- Locate **Bridge_Tools_Launcher.command**.
+- Hold **Option+Command**, then drag **Bridge_Tools_Launcher.command** onto the Desktop:
+- This creates an alias instead of copying the file.
+- Rename the alias to:
+- **Bridge Tools**
+- Optional: change its icon to the Bridge icon (if desired).
+
+## Step 4 – Allow .command files to run (first-time only)
+- On the second Mac, open **Terminal** and run:
+
+- chmod +x "/Volumes/Extreme SSD/Backup_Files_To_NAS/Bridge_Photo_Shortcuts"/*.command
+
+- If macOS shows security prompts when running a .command:
+- Go to **System Settings → Privacy & Security**.
+- Under “Security”, allow the relevant script if macOS offers an “Open Anyway” button.
+- After approving once, future runs should be smooth.
+
+# Part C – Confirm Bridge Tools on the second Mac
+
+## 1 - Open Bridge (Master)
+- Double-click the **Bridge Tools** icon on the Desktop.
+- On the Workflow Hub Tools row, click **Open Bridge (Master)**.
+- Bridge 2026 should launch and point to:
+- Computer → Extreme SSD → Backup_Files_To_NAS → Bridge_Photos
+- If it points somewhere else:
+- Quit Bridge.
+- Re-run **Open Bridge (Master)**.
+- If it still misbehaves, re-run **Build & Open Workflow Hub** to refresh everything.
+
+## 2 - Open Bridge (Shot Dates: Pick Year)
+- From **Bridge Tools → Tools row → Open Bridge (Shot Dates: Pick Year)**:
+- You should get a year prompt (e.g., 2025 or 2026).
+- Pick a year:
+- Bridge 2026 should open to:
+- /Users/[your username]/Pictures/TripPhotoBackup/[year]
+- If that folder does not exist yet:
+- The script will create it for you.
+
+## 3 - Send Photos to SanDisk
+- From **Bridge Tools → Tools row → Send Photos to SanDisk**:
+- A Terminal window should appear and show:
+- “Send Photos to SanDisk starting…”
+- Source: TripPhotoBackup on the second Mac.
+- Destination: Bridge_Photos on the SanDisk.
+- Verify afterwards:
+- New photos appear under:
+- /Volumes/Extreme SSD/Backup_Files_To_NAS/Bridge_Photos/[year]/[shotdate]
+
+## 4 - Build & Open Workflow Hub
+- From the Tools row, click **Build & Open Workflow Hub**:
+- A Terminal window runs **BuildAllFromMaster.sh**.
+- When it finishes, the Hub reloads in Safari.
+- Confirm:
+- All cards (Importing Photos to Bridge, GPS Tracking, Legacy collections, etc.) appear.
+- The Tools row still shows all five buttons.
+
+## 5 - Edit MASTER-steps.txt
+- From the Tools row, click **Edit MASTER-steps.txt**:
+- VS Code should open:
+- /Volumes/Extreme SSD/Backup_Files_To_NAS/PhotographyHub/pages/MASTER-steps.txt
+- You can edit and save as usual.
+- Run **Build & Open Workflow Hub** after edits to refresh cards.
+
+# Part D – Check bridge_env.sh and user-specific paths
+- On the second Mac, open:
+- /Volumes/Extreme SSD/Backup_Files_To_NAS/Bridge_Photo_Shortcuts/bridge_env.sh
+- In VS Code, confirm:
+- MOUNT points to the right drive:
+- MOUNT="/Volumes/Extreme SSD"
+- SAN_ROOT points at Bridge_Photos:
+- SAN_ROOT="$MOUNT/Backup_Files_To_NAS/Bridge_Photos"
+- TRIP_ROOT uses the current Mac’s username:
+- TRIP_ROOT="$HOME/Pictures/TripPhotoBackup"
+- SEND_SCRIPT (if used) points to the local sender script:
+- SEND_SCRIPT="$HOME/Documents/PhotoBackup/send_photos_to_sandisk.sh"
+- If you ever change folder names on the second Mac:
+- Update bridge_env.sh accordingly.
+- Re-test:
+- Open Bridge (Master)
+- Open Bridge (Shot Dates: Pick Year)
+- Send Photos to SanDisk
+
+# Part E – NAS and backups with a second Mac
+- Your NAS and off-site NAS should continue to treat **Extreme SSD** as the main source.
+- If you are using the **same SanDisk**:
+- No change is needed on NAS tasks; you just plug that SanDisk into whichever Mac you are using to manage photos.
+- If you created a **new cloned SanDisk**:
+- Update your NAS backup tasks so they point at the new drive (same path if the volume is named “Extreme SSD”).
+- You do not need to change any Bridge Tools, as long as:
+- The volume name is **Extreme SSD**, and
+- The folder layout under Backup_Files_To_NAS is identical.
+
+# Quick sanity checklist for a new Mac
+- Attach **Extreme SSD**.
+- From Finder, double-click the Desktop **Bridge Tools** alias:
+- Photography Workflow Hub appears.
+- Tools row buttons all respond without errors.
+- Test:
+- Open Bridge (Master) → Bridge 2026 opens at Bridge_Photos.
+- Open Bridge (Shot Dates: Pick Year) → prompts for year and opens TripPhotoBackup/[year].
+- Send Photos to SanDisk → new items copied to Bridge_Photos.
+- Edit MASTER-steps.txt → opens in VS Code.
+- Build & Open Workflow Hub → rebuilds cards and reopens the hub.
+- Once this checklist passes, the second Mac is fully ready for Bridge work with your SanDisk.
+
+@@ title: FaceTime RemoteHelp
+@@ slug: facetime-remotehelp
+@@ summary: FaceTime-only screen sharing so Dick can show his Mac or allow John to control it (no Messages, no iPhone required).
+@@ back: ../index.html
+@@ order: 100
+
+# One-time setup (Dick’s Mac)
+- Apple menu > System Settings
+- Privacy & Security > Screen & System Audio Recording > FaceTime ON
+- Privacy & Security > Accessibility > FaceTime ON
+
+# Start a session (either person can initiate)
+- John or Dick starts a FaceTime Audio call
+- Dick answers on his Mac (Mac-to-Mac)
+- Once connected, Dick shares his screen
+
+# Share screen (Dick)
+- Click Share Screen
+- Select Entire Screen
+
+# Coaching mode (Dick drives, John watches)
+- Dick uses his Mac normally
+- John watches and talks Dick through the steps
+- John does not request control
+
+# Admin mode (John installs or configures)
+- John clicks Request Control
+- Dick clicks Allow Control
+- If macOS asks for a password, Dick types it on his Mac
+
+# Switch or end session
+- Dick can stop control at any time
+- Either person can click Stop Sharing or end the FaceTime call
+
+# FaceTime device clarification
+- FaceTime calls are sent to Dick’s Apple ID, not a specific device
+- If Dick answers on his Mac, the call is Mac-to-Mac
+- The iPhone is not involved unless Dick answers on it
+
+@@ title: Update Master-steps.txt from Piper NAS to SandDisk
+@@ slug: bridgehelp
+@@ summary: Modify Master Steps
+@@ back: ../index.html
+@@ order: 110
+
+# Login to Piper NAS
+- Click on File Station
+- Click Transfers
+- Select MASTER-steps.txt
+- Right click on MASTER-steps.txt
+- Click Download
+- Use Finder and go to Downloads and select MASTER-steps.txt
+- Open another Finder window
+- Navigate to Extreme SSD / Backup_Files_To_NAS / PhotographyHub / pages 
+- Drag MASTER-steps.txt from Downloads to Pages (choose replace)
+
+# Invoke Bridge Tools
+- On tools, double click Build & Open Workflow Hub
+- Close Bridge Tools
+- Invoke Bridge Tools
+
+
+
+
+
+
+
+
+
+
+
+
+
+

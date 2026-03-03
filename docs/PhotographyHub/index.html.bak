@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Photography Workflow Hub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root { --bg:#eef1f4; --fg:#101828; --card:#fff; --accent:#0e49c2; --muted:#475467; }
+    body{margin:24px;font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;background:var(--bg);color:var(--fg)}
+    h1{margin:0 0 16px}
+    .grid{max-width:1100px;margin:0 auto;display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}
+    .card{background:var(--card);border-radius:14px;padding:16px 16px 18px;box-shadow:0 6px 18px rgba(16,24,40,.08)}
+    .card h2{margin:0 0 6px;font-size:18px}
+    .card p{margin:0 0 10px;color:var(--muted)}
+    a{color:#0e49c2;text-decoration:none} a:hover{text-decoration:underline}
+  </style>
+</head>
+<body>
+  <h1>Photography Workflow Hub</h1>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.2">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!-- Tools panel injected by BuildAllFromMaster.sh --&gt;</p>
+<p class="p1">&lt;section class="tools" style="margin:16px 0 20px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.tools .row{display:flex;flex-wrap:wrap;gap:10px}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.tools .tbtn{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:inline-block;padding:10px 14px;border-radius:10px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background:#0e49c2;color:#fff;text-decoration:none;white-space:nowrap</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.tools p{margin:.35rem 0 0;color:#475467;font-size:.95rem}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;h2 style="margin:0 0 8px;font-size:18px;"&gt;Tools&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Open Bridge (Master) --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a class="tbtn"</p>
+<p class="p1"><span class="Apple-converted-space">       </span>href="file:///Volumes/Extreme%20SSD/Backup_Files_To_NAS/Bridge_Photo_Shortcuts/Open_Bridge_Using_Master.command"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>Open Bridge (Master)</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/a&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Build &amp; Open Workflow Hub --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a class="tbtn"</p>
+<p class="p1"><span class="Apple-converted-space">       </span>href="file:///Volumes/Extreme%20SSD/Backup_Files_To_NAS/Bridge_Photo_Shortcuts/Build_And_Open_Hub.command"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>Build &amp;amp; Open Workflow Hub</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/a&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Send Photos to SanDisk --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a class="tbtn"</p>
+<p class="p1"><span class="Apple-converted-space">       </span>href="file:///Volumes/Extreme%20SSD/Backup_Files_To_NAS/Bridge_Photo_Shortcuts/Send_Photos_To_SanDisk.command"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>Send Photos to SanDisk</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/a&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Open Bridge (Shot Dates: Pick Year) --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a class="tbtn"</p>
+<p class="p1"><span class="Apple-converted-space">       </span>href="file:///Volumes/Extreme%20SSD/Backup_Files_To_NAS/Bridge_Photo_Shortcuts/Open_Bridge_Shot_Dates_Pick_Year.command"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>Open Bridge (Shot Dates: Pick Year)</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/a&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Edit MASTER-steps.txt (direct open of the text file) --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a class="tbtn"</p>
+<p class="p1"><span class="Apple-converted-space">       </span>href="file:///Volumes/Extreme%20SSD/Backup_Files_To_NAS/PhotographyHub/pages/MASTER-steps.txt"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>Edit MASTER-steps.txt</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;p&gt;Tip: For best results opening &lt;code&gt;.command&lt;/code&gt; buttons, use Safari.&lt;/p&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+</body>
+</html>
+  <div class="grid">
+    <div class="card"><h2><a href="pages/import-to-bridge.html">Importing Photos to Bridge</a></h2><p>Safely copy from camera/card, verify, then review in Bridge.</p><a href="pages/import-to-bridge.html">Open →</a></div>
+    <div class="card"><h2><a href="pages/gps-tracking.html">GPS Tracking</a></h2><p>Record on GPSMAP 67, export GPX, AirDrop to Mac - requires relevant collection</p><a href="pages/gps-tracking.html">Open →</a></div>
+  </div>
+</body>
+</html>

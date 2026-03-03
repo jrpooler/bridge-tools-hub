@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Using Legacy Photos (2001–2024) in Collections</title>
+<style>body{margin:24px;font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;background:#eef1f4;color:#101828}a{color:#0e49c2;text-decoration:none}a:hover{text-decoration:underline}.wrap{max-width:900px;margin:0 auto}.card{background:#fff;border-radius:14px;padding:20px;box-shadow:0 6px 18px rgba(16,24,40,.08)}.back{margin:0 0 16px;display:inline-block}</style>
+</head><body><div class="wrap">
+<div class="card"><h1>Using Legacy Photos (2001–2024) in Collections</h1>
+<p># What “Legacy Years” means</p>
+<ul>
+<li>Legacy Years are older photos already stored on the SanDisk (for example 2001–2024).</li>
+<li>These photos live under your main photo root on the SanDisk, usually:</li>
+<li>/Volumes/Extreme SSD/Backup_Files_To_NAS/Bridge_Photos</li>
+<li>You do **not** need to move these into TripPhotoBackup to use them in Collections.</li>
+<li>Collections are like **playlists**: they point to where files live; they do not copy or move the files.</li>
+</ul>
+<p># Before you start</p>
+<ul>
+<li>Make sure the SanDisk (Extreme SSD) is attached to your MacBook.</li>
+<li>Confirm that Bridge Tools is working:</li>
+<li>On the Desktop, double-click **Bridge Tools** to open the Photography Workflow Hub.</li>
+<li>In the hub, make sure the **Tools** row shows buttons such as:</li>
+<li>Open Bridge (Master)</li>
+<li>Build &amp; Open Workflow Hub</li>
+<li>Send Photos to SanDisk</li>
+<li>Open Bridge (Shot Dates: Pick Year)</li>
+<li>Edit MASTER-steps.txt</li>
+</ul>
+<p># Step 1 – Open Bridge at the Legacy photo root</p>
+<ul>
+<li>Attach **Extreme SSD**.</li>
+<li>On the Desktop, double-click **Bridge Tools**.</li>
+<li>In the Photography Workflow Hub, in the Tools row, click:</li>
+<li>**Open Bridge (Master)**</li>
+<li>Bridge 2026 should open pointed at:</li>
+<li>Computer → Extreme SSD → Backup_Files_To_NAS → Bridge_Photos</li>
+<li>If Bridge opens somewhere else:</li>
+<li>In Bridge, click the **Folders** panel.</li>
+<li>Navigate manually to:</li>
+<li>Computer → Extreme SSD → Backup_Files_To_NAS → Bridge_Photos</li>
+</ul>
+<p># Step 2 – Navigate to the year and folder you want</p>
+<ul>
+<li>In the **Folders** panel, expand your Legacy Years inside **Bridge_Photos**.</li>
+<li>Examples:</li>
+<li>Bridge_Photos → 2007 → Mammoth Lakes Trip</li>
+<li>Bridge_Photos → 2013 → Palm Desert</li>
+<li>Bridge_Photos → 2020 → Park City</li>
+<li>Wait for thumbnails to build, especially if this is a large folder.</li>
+<li>Use the **Content** panel to view all photos in the selected folder.</li>
+</ul>
+<p># Step 3 – Select the photos for a Collection</p>
+<ul>
+<li>In the **Content** panel:</li>
+<li>Click a thumbnail to select a single photo.</li>
+<li>Shift-click to select a range of photos.</li>
+<li>Command-click to add or remove individual photos from the selection.</li>
+<li>Take a moment to confirm the selection:</li>
+<li>Are all the right photos highlighted?</li>
+<li>Are any photos selected that you do **not** want in the Collection?</li>
+</ul>
+<p># Step 4 – Create a new Collection from Legacy photos</p>
+<ul>
+<li>Open the **Collections** panel in Bridge:</li>
+<li>If needed, click **Window → Collections**.</li>
+<li>To make a brand-new Collection from your Legacy photos:</li>
+<li>In the Collections panel, click the **+** icon (or use the panel menu → **New Collection**).</li>
+<li>In the dialog that appears:</li>
+<li>Give the Collection a clear name, such as:</li>
+<li>Mammoth Lakes 2007 (Legacy)</li>
+<li>Palm Desert 2013 (Legacy)</li>
+<li>Make sure **Include selected items** is checked.</li>
+<li>Click **OK**.</li>
+<li>Bridge will create the Collection that points to the photos in their existing Legacy folder on the SanDisk.</li>
+</ul>
+<p># Step 5 – Add Legacy photos to an existing Collection</p>
+<ul>
+<li>If you already have a Collection and want to add more Legacy photos:</li>
+<li>Go back to the **Folders** panel and select the legacy folder (for example 2010 → Desert Springs).</li>
+<li>In the **Content** panel, select the additional photos you want.</li>
+<li>In the **Collections** panel:</li>
+<li>Drag the selected photos onto the target Collection name.</li>
+<li>The Collection will now include both the new Legacy photos and anything that was already there.</li>
+<li>Reminder:</li>
+<li>The files are **not** duplicated.</li>
+<li>The Collection simply points to their existing location under Bridge_Photos.</li>
+</ul>
+<p># Step 6 – Verify Collections still work as expected</p>
+<ul>
+<li>In the **Collections** panel, click on your Collection:</li>
+<li>Confirm that thumbnails appear for all expected photos.</li>
+<li>Double-click a photo:</li>
+<li>Confirm it opens in Bridge / ACR / Photoshop as you normally expect.</li>
+<li>If any thumbnails show as missing:</li>
+<li>Check that the photo still lives under:</li>
+<li>/Volumes/Extreme SSD/Backup_Files_To_NAS/Bridge_Photos</li>
+<li>If files were moved outside Bridge, you may need to repair or re-create the Collection.</li>
+</ul>
+<p># Important: Avoid moving Legacy folders unless you plan to rebuild Collections</p>
+<ul>
+<li>Existing Collections remember the **old path** to each file.</li>
+<li>If you move legacy folders (for example from:</li>
+<li>Bridge_Photos/OldArchive/Family</li>
+<li>to</li>
+<li>Bridge_Photos/2005/Family_Trip),</li>
+<li>Bridge will consider those links “broken” and the Collection may show missing files.</li>
+<li>Unless the current folder layout is truly unmanageable:</li>
+<li>Prefer to **leave Legacy Years where they already are** on the SanDisk.</li>
+<li>Use Collections to group and find photos instead of physically moving old folders.</li>
+</ul>
+<p># Optional: If you really must reorganize a Legacy folder</p>
+<ul>
+<li>Before making any big changes, consider:</li>
+<li>Take notes on which Collections use that legacy folder.</li>
+<li>Optionally export a small test folder and experiment with a copy first.</li>
+<li>Basic approach if you decide to reorganize:</li>
+<li>In Finder, **do not** move the real folders yet.</li>
+<li>Instead, test with a smaller subset of photos:</li>
+<li>Copy a few files into a new structure under Bridge_Photos.</li>
+<li>In Bridge, build a new Collection that points to the **new** location.</li>
+<li>Confirm this new structure works for you.</li>
+<li>Only when you are comfortable:</li>
+<li>Plan a larger reorganization and expect to:</li>
+<li>Rebuild or repair existing Collections that referenced the old locations.</li>
+<li>For most cases, it is much safer to:</li>
+<li>Keep Legacy Years where they are.</li>
+<li>Use Collections as your main way to assemble favorite sets of photos.</li>
+</ul>
+</div></div></body></html>

@@ -1,0 +1,36 @@
+﻿@@ title: GPS Tracking
+@@ slug: gps-tracking
+@@ summary: Record on GPSMAP 67, export GPX, AirDrop to Mac.
+@@ back: ../index.html
+@@ order: 30
+
+# Prepare GPSMAP 67
+- Go outside where GPS can lock satellites.
+- Confirm recording interval (e.g., 1s) and accuracy mode.
+- Verify time and time zone.
+
+# Record the activity
+- Start activity on GPSMAP 67.
+- Walk/drive your route; check track is recording.
+- End and save the activity; give it a clear name.
+
+# Sync & export GPX
+- Sync to iPhone (Garmin Explore / Connect).
+- Export .GPX.
+- AirDrop to Mac (or copy to SanDisk).
+
+
+
+
+
+
+ 
+
+
+ 
+ 
+
+
+
+
+

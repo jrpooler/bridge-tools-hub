@@ -1,0 +1,9 @@
+$in  = "H:\Backup_Files_To_NAS\PhotographyHub\pages\gps-tracking-steps.txt"
+$out = "H:\Backup_Files_To_NAS\PhotographyHub\pages\gps-tracking.html"
+
+powershell -NoProfile -ExecutionPolicy Bypass `
+  -File "H:\Backup_Files_To_NAS\PhotographyHub\tools\Convert-StepsToHtml.ps1" `
+  -InputTxt $in `
+  -OutputHtml $out `
+  -Title "GPS Tracking" `
+  -BackHref "../index.html"

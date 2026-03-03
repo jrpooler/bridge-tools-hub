@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Install Bridge Tools on another Mac with SanDisk</title>
+<style>body{margin:24px;font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;background:#eef1f4;color:#101828}a{color:#0e49c2;text-decoration:none}a:hover{text-decoration:underline}.wrap{max-width:900px;margin:0 auto}.card{background:#fff;border-radius:14px;padding:20px;box-shadow:0 6px 18px rgba(16,24,40,.08)}.back{margin:0 0 16px;display:inline-block}</style>
+</head><body><div class="wrap">
+<div class="card"><h1>Install Bridge Tools on another Mac with SanDisk</h1>
+<p># Overview</p>
+<ul>
+<li>Goal: make a second Mac behave like your main Mac for Bridge work:</li>
+<li>Same SanDisk structure (Bridge_Photos, PhotographyHub, Bridge_Photo_Shortcuts)</li>
+<li>Same Photography Workflow Hub (cards + Tools row)</li>
+<li>Same Bridge Tools (Open Bridge (Master), Send Photos to SanDisk, etc.)</li>
+<li>You can:</li>
+<li>Use the *same* SanDisk with both Macs (simplest), or</li>
+<li>Create a *clone* SanDisk that has the same folder layout and hub.</li>
+</ul>
+<p># Part A – Make sure the SanDisk is ready</p>
+<ul>
+<li>On your main Mac (where everything already works):</li>
+<li>Attach **Extreme SSD**.</li>
+<li>In Finder, confirm this structure exists:</li>
+<li>/Volumes/Extreme SSD/Backup_Files_To_NAS/Bridge_Photos</li>
+<li>/Volumes/Extreme SSD/Backup_Files_To_NAS/PhotographyHub</li>
+<li>/Volumes/Extreme SSD/Backup_Files_To_NAS/Bridge_Photo_Shortcuts</li>
+<li>Bridge_Photo_Shortcuts should contain:</li>
+<li>Bridge_Tools_Launcher.command</li>
+<li>Open_Bridge_Using_Master.command</li>
+<li>Open_Bridge_Shot_Dates_Pick_Year.command</li>
+<li>Build_And_Open_Hub.command</li>
+<li>Send_Photos_To_SanDisk.command</li>
+<li>Edit_MASTER_steps.command (or similar)</li>
+<li>bridge_env.sh</li>
+</ul>
+<p>## Option 1 – Share one SanDisk between both Macs (recommended)</p>
+<ul>
+<li>Easiest and safest:</li>
+<li>Keep using the same **Extreme SSD** on both Macs.</li>
+<li>PhotographyHub, Bridge_Photos, and Bridge_Photo_Shortcuts live only on this drive.</li>
+<li>Each Mac:</li>
+<li>Has its own local TripPhotoBackup folder.</li>
+<li>Uses the same SanDisk for “master” originals and the hub.</li>
+<li>Skip to **Part B**.</li>
+</ul>
+<p>## Option 2 – Clone to a second SanDisk (optional)</p>
+<ul>
+<li>If you want a separate, identical SanDisk:</li>
+<li>On your main Mac:</li>
+<li>Attach **BOTH** drives:</li>
+<li>Source: current **Extreme SSD** (already in use)</li>
+<li>Target: new SanDisk (empty or OK to erase)</li>
+<li>Use a cloning method you trust:</li>
+<li>Disk Utility “Restore” (drive-to-drive clone), or</li>
+<li>A backup/clone tool you already use (for example, Carbon Copy Cloner or similar).</li>
+<li>Important:</li>
+<li>Give the new drive the same name:</li>
+<li>**Extreme SSD**</li>
+<li>So all paths like:</li>
+<li>/Volumes/Extreme SSD/Backup_Files_To_NAS/...</li>
+<li>are valid on either drive.</li>
+<li>After cloning, eject the original and test the new SanDisk by itself:</li>
+<li>Attach only the new SanDisk.</li>
+<li>In Finder, confirm:</li>
+<li>Bridge_Photos</li>
+<li>PhotographyHub</li>
+<li>Bridge_Photo_Shortcuts</li>
+<li>all exist under Backup_Files_To_NAS.</li>
+</ul>
+<p># Part B – First-time setup on the second Mac</p>
+<ul>
+<li>On the new Mac:</li>
+</ul>
+<p>## Step 1 – Install the apps you need</p>
+<ul>
+<li>Install **Adobe Bridge 2026** (same major version as the main Mac).</li>
+<li>Install **Visual Studio Code** (for editing MASTER-steps.txt and scripts).</li>
+<li>Shortcuts app is built into macOS; no extra install needed.</li>
+</ul>
+<p>## Step 2 – Attach SanDisk and test basic access</p>
+<ul>
+<li>Attach **Extreme SSD** to the second Mac.</li>
+<li>In Finder:</li>
+<li>Click **Extreme SSD** in the sidebar.</li>
+<li>Drill down to:</li>
+<li>Backup_Files_To_NAS → Bridge_Photos</li>
+<li>Backup_Files_To_NAS → PhotographyHub → index.html</li>
+<li>Backup_Files_To_NAS → Bridge_Photo_Shortcuts</li>
+<li>Double-click **Bridge_Tools_Launcher.command**:</li>
+<li>Confirm the **Photography Workflow Hub** opens in Safari.</li>
+<li>Check the **Tools** row at the top:</li>
+<li>Open Bridge (Master)</li>
+<li>Build &amp; Open Workflow Hub</li>
+<li>Send Photos to SanDisk</li>
+<li>Open Bridge (Shot Dates: Pick Year)</li>
+<li>Edit MASTER-steps.txt</li>
+</ul>
+<p>## Step 3 – Create the “Bridge Tools” icon on the Desktop</p>
+<ul>
+<li>In Finder, navigate to:</li>
+<li>/Volumes/Extreme SSD/Backup_Files_To_NAS/Bridge_Photo_Shortcuts</li>
+<li>Locate **Bridge_Tools_Launcher.command**.</li>
+<li>Hold **Option+Command**, then drag **Bridge_Tools_Launcher.command** onto the Desktop:</li>
+<li>This creates an alias instead of copying the file.</li>
+<li>Rename the alias to:</li>
+<li>**Bridge Tools**</li>
+<li>Optional: change its icon to the Bridge icon (if desired).</li>
+</ul>
+<p>## Step 4 – Allow .command files to run (first-time only)</p>
+<ul>
+<li>On the second Mac, open **Terminal** and run:</li>
+</ul>
+<ul>
+<li>chmod +x "/Volumes/Extreme SSD/Backup_Files_To_NAS/Bridge_Photo_Shortcuts"/*.command</li>
+</ul>
+<ul>
+<li>If macOS shows security prompts when running a .command:</li>
+<li>Go to **System Settings → Privacy &amp; Security**.</li>
+<li>Under “Security”, allow the relevant script if macOS offers an “Open Anyway” button.</li>
+<li>After approving once, future runs should be smooth.</li>
+</ul>
+<p># Part C – Confirm Bridge Tools on the second Mac</p>
+<p>## 1 - Open Bridge (Master)</p>
+<ul>
+<li>Double-click the **Bridge Tools** icon on the Desktop.</li>
+<li>On the Workflow Hub Tools row, click **Open Bridge (Master)**.</li>
+<li>Bridge 2026 should launch and point to:</li>
+<li>Computer → Extreme SSD → Backup_Files_To_NAS → Bridge_Photos</li>
+<li>If it points somewhere else:</li>
+<li>Quit Bridge.</li>
+<li>Re-run **Open Bridge (Master)**.</li>
+<li>If it still misbehaves, re-run **Build &amp; Open Workflow Hub** to refresh everything.</li>
+</ul>
+<p>## 2 - Open Bridge (Shot Dates: Pick Year)</p>
+<ul>
+<li>From **Bridge Tools → Tools row → Open Bridge (Shot Dates: Pick Year)**:</li>
+<li>You should get a year prompt (e.g., 2025 or 2026).</li>
+<li>Pick a year:</li>
+<li>Bridge 2026 should open to:</li>
+<li>/Users/[your username]/Pictures/TripPhotoBackup/[year]</li>
+<li>If that folder does not exist yet:</li>
+<li>The script will create it for you.</li>
+</ul>
+<p>## 3 - Send Photos to SanDisk</p>
+<ul>
+<li>From **Bridge Tools → Tools row → Send Photos to SanDisk**:</li>
+<li>A Terminal window should appear and show:</li>
+<li>“Send Photos to SanDisk starting…”</li>
+<li>Source: TripPhotoBackup on the second Mac.</li>
+<li>Destination: Bridge_Photos on the SanDisk.</li>
+<li>Verify afterwards:</li>
+<li>New photos appear under:</li>
+<li>/Volumes/Extreme SSD/Backup_Files_To_NAS/Bridge_Photos/[year]/[shotdate]</li>
+</ul>
+<p>## 4 - Build &amp; Open Workflow Hub</p>
+<ul>
+<li>From the Tools row, click **Build &amp; Open Workflow Hub**:</li>
+<li>A Terminal window runs **BuildAllFromMaster.sh**.</li>
+<li>When it finishes, the Hub reloads in Safari.</li>
+<li>Confirm:</li>
+<li>All cards (Importing Photos to Bridge, GPS Tracking, Legacy collections, etc.) appear.</li>
+<li>The Tools row still shows all five buttons.</li>
+</ul>
+<p>## 5 - Edit MASTER-steps.txt</p>
+<ul>
+<li>From the Tools row, click **Edit MASTER-steps.txt**:</li>
+<li>VS Code should open:</li>
+<li>/Volumes/Extreme SSD/Backup_Files_To_NAS/PhotographyHub/pages/MASTER-steps.txt</li>
+<li>You can edit and save as usual.</li>
+<li>Run **Build &amp; Open Workflow Hub** after edits to refresh cards.</li>
+</ul>
+<p># Part D – Check bridge_env.sh and user-specific paths</p>
+<ul>
+<li>On the second Mac, open:</li>
+<li>/Volumes/Extreme SSD/Backup_Files_To_NAS/Bridge_Photo_Shortcuts/bridge_env.sh</li>
+<li>In VS Code, confirm:</li>
+<li>MOUNT points to the right drive:</li>
+<li>MOUNT="/Volumes/Extreme SSD"</li>
+<li>SAN_ROOT points at Bridge_Photos:</li>
+<li>SAN_ROOT="$MOUNT/Backup_Files_To_NAS/Bridge_Photos"</li>
+<li>TRIP_ROOT uses the current Mac’s username:</li>
+<li>TRIP_ROOT="$HOME/Pictures/TripPhotoBackup"</li>
+<li>SEND_SCRIPT (if used) points to the local sender script:</li>
+<li>SEND_SCRIPT="$HOME/Documents/PhotoBackup/send_photos_to_sandisk.sh"</li>
+<li>If you ever change folder names on the second Mac:</li>
+<li>Update bridge_env.sh accordingly.</li>
+<li>Re-test:</li>
+<li>Open Bridge (Master)</li>
+<li>Open Bridge (Shot Dates: Pick Year)</li>
+<li>Send Photos to SanDisk</li>
+</ul>
+<p># Part E – NAS and backups with a second Mac</p>
+<ul>
+<li>Your NAS and off-site NAS should continue to treat **Extreme SSD** as the main source.</li>
+<li>If you are using the **same SanDisk**:</li>
+<li>No change is needed on NAS tasks; you just plug that SanDisk into whichever Mac you are using to manage photos.</li>
+<li>If you created a **new cloned SanDisk**:</li>
+<li>Update your NAS backup tasks so they point at the new drive (same path if the volume is named “Extreme SSD”).</li>
+<li>You do not need to change any Bridge Tools, as long as:</li>
+<li>The volume name is **Extreme SSD**, and</li>
+<li>The folder layout under Backup_Files_To_NAS is identical.</li>
+</ul>
+<p># Quick sanity checklist for a new Mac</p>
+<ul>
+<li>Attach **Extreme SSD**.</li>
+<li>From Finder, double-click the Desktop **Bridge Tools** alias:</li>
+<li>Photography Workflow Hub appears.</li>
+<li>Tools row buttons all respond without errors.</li>
+<li>Test:</li>
+<li>Open Bridge (Master) → Bridge 2026 opens at Bridge_Photos.</li>
+<li>Open Bridge (Shot Dates: Pick Year) → prompts for year and opens TripPhotoBackup/[year].</li>
+<li>Send Photos to SanDisk → new items copied to Bridge_Photos.</li>
+<li>Edit MASTER-steps.txt → opens in VS Code.</li>
+<li>Build &amp; Open Workflow Hub → rebuilds cards and reopens the hub.</li>
+<li>Once this checklist passes, the second Mac is fully ready for Bridge work with your SanDisk.</li>
+</ul>
+</div></div></body></html>
