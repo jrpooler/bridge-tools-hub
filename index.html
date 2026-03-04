@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Bridge Tools — Photography Workflow Hub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root { --bg:#eef1f4; --fg:#101828; --card:#fff; --accent:#0e49c2; --muted:#475467; }
+    body{margin:24px;font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;background:var(--bg);color:var(--fg)}
+    h1{margin:0 0 8px}
+    .stamp{margin:0 0 16px;color:#6b7280;font-size:.95rem}
+    .grid{max-width:1100px;margin:0 auto;display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}
+    .card{background:var(--card);border-radius:14px;padding:16px 16px 18px;box-shadow:0 6px 18px rgba(16,24,40,.08)}
+    .card h2{margin:0 0 6px;font-size:18px}
+    .card p{margin:0 0 10px;color:var(--muted)}
+    a{color:#0e49c2;text-decoration:none} a:hover{text-decoration:underline}
+  </style>
+</head>
+<body>
+  <h1>Bridge Tools — Photography Workflow Hub</h1>
+<!-- Tools panel injected by BuildAllFromMaster.sh -->
+<section class="tools" style="margin:16px 0 20px;">
+  <style>
+    .tools .row{display:flex;flex-wrap:wrap;gap:10px}
+    .tools .tbtn{
+      display:inline-block;padding:10px 14px;border-radius:10px;
+      background:#0e49c2;color:#fff;text-decoration:none;white-space:nowrap
+    }
+    .tools p{margin:.35rem 0 0;color:#475467;font-size:.95rem}
+  </style>
+  <h2 style="margin:0 0 8px;font-size:18px;">Tools</h2>
+  <div class="row">
+
+   <!-- Open Bridge (Master) -->
+   <a class="tbtn"
+      href="shortcuts://run-shortcut?name=Open%20Bridge%20%28Master%29">
+      Open Bridge (Master)
+   </a>
+
+   <!-- Build & Open Workflow Hub -->
+   <a class="tbtn"
+      href="shortcuts://run-shortcut?name=Build%20%26%20Open%20Workflow%20Hub">
+      Build &amp; Open Workflow Hub
+   </a>
+
+    <!-- Send Photos to SanDisk -->
+      <a class="tbtn"
+         href="shortcuts://run-shortcut?name=Send%20Photos%20to%20SanDisk">
+         Send Photos to SanDisk
+      </a>
+
+    <!-- Open Bridge (Shot Dates: Pick Year) -->
+<a class="tbtn"
+   href="shortcuts://run-shortcut?name=Open%20Bridge%20%28Shot%20Dates%3A%20Pick%20Year%29">
+   Open Bridge (Shot Dates: Pick Year)
+</a>
+
+    <!-- Edit MASTER-steps.txt -->
+<a class="tbtn"
+   href="shortcuts://run-shortcut?name=Edit%20MASTER-steps.txt">
+   Edit MASTER-steps.txt
+</a>
+  </div>
+  <p>Tip: For best results opening <code>.command</code> buttons, use Safari.</p>
+</section>
+  <div class="stamp">Edits happen on the SanDisk. Build syncs to iCloud. iPhone reads the iCloud mirror.</div>
+  <div class="stamp">Last built: 2026-02-18 14:19:53 PST</div>
+  <div class="grid">
+    <div class="card"><h2><a href="pages/import-to-bridge.html" >Importing Photos to Bridge</a></h2><p>Safely copy from camera/card, verify, then review in Bridge.</p><a href="pages/import-to-bridge.html" >Open →</a></div>
+    <div class="card"><h2><a href="pages/gps-tracking.html" >GPS Tracking</a></h2><p>Record on GPSMAP 67, export GPX, AirDrop to Mac - requires relevant collection</p><a href="pages/gps-tracking.html" >Open →</a></div>
+    <div class="card"><h2><a href="pages/legacy-collections.html" >Using Legacy Photos (2001–2024) in Collections</a></h2><p>Safely use older SanDisk photos in Bridge Collections without moving or breaking anything.</p><a href="pages/legacy-collections.html" >Open →</a></div>
+    <div class="card"><h2><a href="pages/install-bridge-tools-second-mac.html" >Install Bridge Tools on another Mac with SanDisk</a></h2><p>Set up Bridge Tools, the Workflow Hub, and your SanDisk on a second Mac so everything works like your main system.</p><a href="pages/install-bridge-tools-second-mac.html" >Open →</a></div>
+    <div class="card"><h2><a href="pages/facetime-remotehelp.html" >FaceTime RemoteHelp</a></h2><p>FaceTime-only screen sharing so Dick can show his Mac or allow John to control it (no Messages, no iPhone required).</p><a href="pages/facetime-remotehelp.html" >Open →</a></div>
+    <div class="card"><h2><a href="pages/bridgehelp.html" >Update Master-steps.txt from Piper NAS to SandDisk</a></h2><p>Modify Master Steps</p><a href="pages/bridgehelp.html" >Open →</a></div>
+  </div>
+</body>
+</html>
